@@ -24,7 +24,8 @@ namespace BlazorWebAssembly.Server.Models
 
         public async Task<IEnumerable<Reserva>> GetReservas()
         {
-            return await appDbContext.Reservas.ToListAsync();
+            return await appDbContext.Reservas.ToListAsync();//devuelve todos los datos no solo el Numero_reserva
+            //futuro: alterar para que al introducir api/reservas solo muestre Numero_Reserva
         }
 
         public async Task<IEnumerable<Reserva>> Search(string Num_reserva)
